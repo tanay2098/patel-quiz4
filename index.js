@@ -53,11 +53,9 @@ pool.query(sql_insert, [], (err, result) => {
   });
 });
 
+var port_number=server.listen(process.env.PORT||3000);
+app.listen(port_number);
 
-app.listen(3000,()=>{
-    console.log("Server started (http://localhost:3000/)!");
-
-});
 
 
 
