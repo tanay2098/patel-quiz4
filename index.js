@@ -53,10 +53,10 @@ pool.query(sql_insert, [], (err, result) => {
   });
 });
 
-var port_number=server.listen(process.env.PORT||3000);
-app.listen(port_number);
 
-
+const listener=app.listen(process.env.PORT||3000,()=>{
+console.log(`Your app is listening on port ${listener.address().port}`);
+});
 
 
 app.get("/",(req,res)=>{
